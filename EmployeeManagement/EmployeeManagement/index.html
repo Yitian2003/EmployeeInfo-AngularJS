@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="employeeManagementApp/site.css" rel="stylesheet" />
+</head>
+<body ng-app="employeeManagementApp" class="ng-scope">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Employee Management App
+        </div>
+        <div class="container" ng-controller="employeesController" ngcloak>
+            <h1>Employees</h1>
+            <div class="row">
+                <div>
+                    <button class="btn btn-primary" ng-click="previousEmployee()">
+                        Previous
+                    </button>
+                    <button class="btn btn-primary" ng-click="nextEmployee()">
+                        Next
+                    </button>
+                    <button class="btn btn-success" ng-click="addEmployee()">
+                        Add
+                    </button>
+                    <button class="btn btn-danger" ng-click="deleteEmployee()">
+                        Delete
+                    </button>
+                    <br style="clear:both">
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div  ng-repeat="employee in employee">
+
+                    <table border="0" class="pull-left">
+                        <tr>
+                            <td width="100">First Name: </td>
+                            <td>
+                                <input type="text" ng-model="employee.FirstName" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Last Name: </td>
+                            <td>
+                                <input type="text" ng-model="employee.LastName" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Company: </td>
+                            <td>
+                                <input type="text" ng-model="employee.Company" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Job Title: </td>
+                            <td>
+                                <input type="text" ng-model="employee.JobTitle" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Business Phone: </td>
+                            <td>
+                                <input type="text" ng-model="employee.BusinessPhone" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Home Phone: </td>
+                            <td>
+                                <input type="text" ng-model="employee.HomePhone" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Phone: </td>
+                            <td>
+                                <input type="text" ng-model="employee.MobilePhone" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Street: </td>
+                            <td>
+                                <input type="text" ng-model="employee.Street" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>City: </td>
+                            <td>
+                                <input type="text" ng-model="employee.City" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>State: </td>
+                            <td>
+                                <input type="text" ng-model="employee.State" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Country: </td>
+                            <td>
+                                <input type="text" ng-model="employee.Country" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email: </td>
+                            <td>
+                                <input type="text" ng-model="employee.Email" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>WebPage: </td>
+                            <td>
+                                <input type="text" ng-model="employee.WebPage" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Notes: </td>
+                            <td>
+                                <input type="text" ng-model="employee.Notes" placeholder="Enter a name here">
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0">                        
+                        <tr>
+                            <td >
+                                <h1>Hello {{employee.FirstName}} {{employee.LastName}}!</h1>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="employeeManagementApp/employeeManagementApp.js"></script>
+    <script src="employeeManagementApp/controllers/employeesController.js"></script>
+    <script src="employeeManagementApp/services/employeeService.js"></script>
+</body>
+</html>
